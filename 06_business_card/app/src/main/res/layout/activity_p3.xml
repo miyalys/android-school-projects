@@ -1,0 +1,18 @@
+<?xml version="2.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#bbbb99"
+android:orientation="vertical">
+
+    <TextView
+        android:text="There are 2 hard problems in computer science:\n cache invalidation, naming things,\n and off-by-1 errors."
+        android:textStyle="italic"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+</LinearLayout>

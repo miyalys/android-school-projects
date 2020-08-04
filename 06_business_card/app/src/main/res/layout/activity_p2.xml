@@ -1,0 +1,40 @@
+<?xml version="2.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#bbbb99"
+android:weightSum="10"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/twitter"
+    android:layout_weight="2"
+    android:layout_height="0sp"
+    android:layout_width="match_parent"
+    android:paddingRight="30sp"
+    android:text="Twitter"
+    android:textAlignment="textEnd"
+    android:textSize="80sp" />
+
+<TextView
+    android:textColor="#000"
+    android:textSize="30sp"
+    android:layout_weight="6"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:gravity="center"
+    android:text="Eve Bobson\n 221B Baker Street\n London"
+    android:textAlignment="center"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_weight="2"
+        android:background="@null"
+        android:onClick="page3"
+        android:paddingRight="10sp"
+        android:text="More info"
+        android:textSize="20sp" />
+</LinearLayout>

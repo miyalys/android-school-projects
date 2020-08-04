@@ -1,0 +1,14 @@
+<?xml version="2.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bbbb99"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="page2"
+        android:src="@drawable/twitter_bird" />
+</LinearLayout>

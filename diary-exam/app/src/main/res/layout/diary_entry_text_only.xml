@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="40dp"
+android:orientation="horizontal"
+tools:context=".MainActivity">
+
+    <!-- What a diary entry without an image looks like on the list of all entries-->
+    <TextView
+        android:id="@+id/diary_entry_textview_text"
+        android:textColor="#ddd"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+    />
+
+    <!-- This additional LinearLayout is a silly workaround to be able to have a horizontal LinearLayout where elements are floated left/right -->
+    <!-- https://thinkandroid.wordpress.com/2010/01/14/how-to-position-views-properly-in-layouts/ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="right"
+    >
+        <TextView
+            android:id="@+id/diary_entry_textview_time"
+            android:textColor="#ddd"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
+

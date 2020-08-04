@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QuarantineApplication</string>
+    <string name="title_activity_place">Map</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

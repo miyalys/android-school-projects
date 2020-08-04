@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    tools:context=".ViewAddDiaryEntryActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/save_diary_entry_button"
+            android:layout_width="66dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:onClick="buttonHandler"
+            android:text="Save"
+            android:textSize="11dp"
+            android:backgroundTint="#88ff88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/take_photo_button"
+            android:layout_width="66dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="5dp"
+            android:onClick="buttonHandler"
+            android:text="Photo"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/record_audio_button"
+            android:layout_width="66dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="126dp"
+            android:layout_marginTop="5dp"
+            android:onClick="buttonHandler"
+            android:text="Speak"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Ideally this should only be shown when an existing entry was clicked,
+        not when a new one is created -->
+        <Button
+            android:id="@+id/delete_diary_entry_button"
+            android:layout_width="66dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="186dp"
+            android:layout_marginTop="5dp"
+            android:onClick="buttonHandler"
+            android:text="Delete"
+            android:textSize="11dp"
+            android:backgroundTint="#ff8888"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cancel_diary_entry_button"
+            android:layout_width="66dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:onClick="buttonHandler"
+            android:text="Back"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:minHeight="100dp"
+        android:textColor="#ddd"
+        android:layout_height="wrap_content"
+        android:id="@+id/diary_text"
+     />
+
+    <!-- This may be empty. Should I do a separate layout for it? -->
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/diary_image"
+    />
+
+</LinearLayout>

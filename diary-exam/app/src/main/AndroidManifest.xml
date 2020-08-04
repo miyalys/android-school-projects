@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.eu.miyalys.diary">
+    <!-- miyalys: added these: -->
+    <!-- Required for camera to work properly. Thumbnail seems to work even without it, but maybe for getting the full size image? -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- miyalys: Might be required to view the image in the gallery -->
+    <!-- Technically I might no longer require these as I record to the app's own directory AFAIK -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- This is needed when wanting to obtain the full size photo taken by the camera -->
+    <!-- https://developer.android.com/training/camera/photobasics#java -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- For audio diary entries -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".login.SignupActivity"></activity>
+        <activity android:name=".LandingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ImageHandlerActivity" />
+        <activity android:name=".ViewAddDiaryEntryActivity" />
+        <activity android:name=".MainActivity"/>
+
+        <!-- miyalys: Necessary for the FileProvider -->
+        <!-- https://stackoverflow.com/a/58908053/1172409 -->
+        <!-- https://developer.android.com/training/camera/photobasics#java -->
+        <!-- The file specified under resource below actually has to be created and populated: in app/res, by the name specified below -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="org.eu.miyalys.diary.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

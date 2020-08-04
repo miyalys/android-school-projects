@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    tools:context=".LandingActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="cursive"
+        android:text="Diary"
+        android:textAlignment="center"
+        android:textColor="#ddda02"
+        android:textSize="51dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:onClick="buttonHandler"
+        android:text="Sign up"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:context=".login.SigninActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="E-Mail:"
+            android:textAlignment="center"
+            android:textColor="#ddd" />
+
+        <!-- Prefilling login details while developing -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:text="m@m.me"
+            android:layout_height="40dp"
+            android:textColor="#ddd" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Password:"
+            android:textAlignment="center"
+            android:textColor="#ddd" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:text="111111"
+            android:layout_height="40dp"
+            android:textColor="#ddd" />
+
+        <Button
+            android:id="@+id/button_signin"
+            android:layout_width="66dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="162dp"
+            android:onClick="buttonHandler"
+            android:text="Sign In"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
